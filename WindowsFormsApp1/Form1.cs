@@ -35,6 +35,16 @@ namespace WindowsFormsApp1
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            cone();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            cone();
+        }
+
+        void cone()
+        {
             try
             {
                 double r = double.Parse(textBox2.Text);
