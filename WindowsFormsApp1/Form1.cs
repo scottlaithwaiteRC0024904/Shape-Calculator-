@@ -35,10 +35,18 @@ namespace WindowsFormsApp1
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            double r = double.Parse(textBox2.Text);
-            double h = double.Parse(textBox3.Text);
-            label5.Text = (Math.PI * r * r + Math.PI * r * Math.Sqrt(h * h + r * r)).ToString("N");
-            label6.Text = (1.0 / 3.0 * Math.PI * r * r * h).ToString("N");
+            try
+            {
+                double r = double.Parse(textBox2.Text);
+                double h = double.Parse(textBox3.Text);
+                label5.Text = (Math.PI * r * r + Math.PI * r * Math.Sqrt(h * h + r * r)).ToString("N");
+                label6.Text = (1.0 / 3.0 * Math.PI * r * r * h).ToString("N");
+            }
+            catch
+            {
+                label5.Text = "N/A";
+                label6.Text = "N/A";
+            }
         }
     }
 }
